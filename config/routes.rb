@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root to: 'messages#index'
   get 'messages/index'
-  get 'messages/new'
+  post 'messages/index', to: 'messages#create'
 end
