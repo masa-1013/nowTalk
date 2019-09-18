@@ -1,12 +1,9 @@
-<div class="messages">
-  <% @messages.each do |message| %>
-    <h2><%= message.content %></h2>
-  <% end %>
+<div id="messages">
+  <%= render @messages %>
 </div>
 
-
 <%= form_with url: messages_index_path, scope: :message, id: 'new_message' do |f|%>
-  <div class="form-group" id="message-input">
+  <div class="form-group">
     <%= f.text_field :content, class: 'form-control', id: 'message_content' %>
   </div>
   <%= f.submit 'send', class: 'btn btn-primary' %>
