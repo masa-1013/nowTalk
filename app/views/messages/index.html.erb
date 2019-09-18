@@ -1,8 +1,11 @@
-<% @messages.each do |message| %>
-<h2><%= message.content %></h2>
-<% end %>
+<div class="messages">
+  <% @messages.each do |message| %>
+    <h2><%= message.content %></h2>
+  <% end %>
+</div>
 
-<%= form_with url: messages_index_path, local: true do |f| %>
+
+<%= form_with url: messages_index_path, scope: :message, id: 'new_message' do |f|%>
   <div class="form-group" id="message-input">
     <%= f.text_field :content, class: 'form-control', id: 'message_content' %>
   </div>
