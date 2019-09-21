@@ -1,4 +1,13 @@
-#message-input {
-  width: 500px;
-  height: 40px;
+#message_content {
+  width: 80%;
+  float: left;
+  margin-left: 5%;
+}
+
+.messages {
+  padding-bottom: 10px;
+}
+
+#messages {
+  padding-bottom: 40px;
 }
